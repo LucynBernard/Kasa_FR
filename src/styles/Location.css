@@ -1,0 +1,14 @@
+.location {
+  background-color: var(--red);
+  width: calc(33.33% - 0.67rem);
+  padding: 1rem;
+  box-sizing: border-box;
+  border-radius: 10px;
+  height: 340px;
+  width: 340px;
+  align-items: end;
+  display: flex;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+}

@@ -1,0 +1,8 @@
+.grid {
+  background-color: #f6f6f6;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  border-radius: 20px;
+  padding: 2rem;
+}
