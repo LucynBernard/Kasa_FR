@@ -4,7 +4,7 @@ import Location from "./Location.jsx"
 
 function AllLocations() {
   return (
-    <div className="grid">
+    <div className="galerie">
       <Location />
       <Location />
       <Location />

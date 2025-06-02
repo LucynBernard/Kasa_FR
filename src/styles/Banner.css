@@ -1,10 +1,13 @@
 .banner {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .banner img {
   height: 223px;
-  width: 1240px;
+  width: 100%;
   object-fit: cover;
   border-radius: 20px;
   filter: brightness(50%);
@@ -14,6 +17,17 @@
   color: white;
   font-size: 48px;
   position: absolute;
-  top: 50px;
-  left: 300px;
+}
+
+/* Media queries */
+
+@media screen and (width <= 768px) {
+  .banner img {
+    height: 111px;
+  }
+
+  .banner h1 {
+    font-size: 24px;
+    padding-left: 1rem;
+  }
 }

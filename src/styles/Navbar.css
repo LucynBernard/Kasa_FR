@@ -14,3 +14,33 @@
   align-items: flex-end;
   gap: 2rem;
 }
+
+.navbar a {
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.navbar a.active {
+  text-decoration: underline;
+}
+
+/* Media queries */
+
+@media screen and (width <= 768px) {
+  .navbar-logo img {
+    width: 145px;
+  }
+  .navbar-links {
+    gap: 1rem;
+  }
+
+  .navbar a {
+    font-size: 17px;
+    text-transform: uppercase;
+  }
+}
