@@ -1,6 +1,8 @@
 import React from "react"
 import { useParams } from "react-router-dom"
 import data from "../data/logements.json"
+import "../styles/Locationpage.css"
+import arrowDown from "../assets/arrow_down.png"
 
 function Locationpage() {
   const { id } = useParams()
@@ -10,35 +12,55 @@ function Locationpage() {
     return <h2>Location non trouvée</h2>
   }
 
-  const { title, cover, description, host, rating } = logement
+  const { title, cover, description, host, rating, location, tags } = logement
   return (
     <div className="location-page">
-      <div>
+      <div className="location-carrousel">
         <img src={cover} alt={title} />
       </div>
-      <div className="location-title">
-        <h1>{title}</h1>
-      </div>
-      <div className="location-host">
-        <h3>{host.name}</h3>
-        <div className="location-host-pic">
-          <img src={host.picture} alt={host.name} />
+      <div className="location-header">
+        <div className="location-title">
+          <h1>{title}</h1>
+          <h2>{location}</h2>
+          <div className="location-tags">
+            {tags.map((tag, index) => (
+              <button key={index}>{tag}</button>
+            ))}
+          </div>
+        </div>
+        <div className="location-host">
+          <div className="location-host-details">
+            <h3>{host.name}</h3>
+            <div className="location-host-pic">
+              <img src={host.picture} alt={host.name} />
+            </div>
+          </div>
+          <div className="location-rating">
+            {[1, 2, 3, 4, 5].map((num) => (
+              <span key={num}>
+                <i
+                  className={
+                    num <= parseInt(rating)
+                      ? "fa-solid fa-star"
+                      : "fa-regular fa-star"
+                  }
+                ></i>
+              </span>
+            ))}
+          </div>
         </div>
       </div>
-      <div className="location-rating">
-        {[1, 2, 3, 4, 5].map((num) => (
-          <span key={num}>
-            <i
-              className={
-                num <= parseInt(rating)
-                  ? "fa-solid fa-star"
-                  : "fa-regular fa-star"
-              }
-            ></i>
-          </span>
-        ))}
+      <div className="location-description">
+        <p className="description-title">
+          <span>Description</span>
+          <img
+            src={arrowDown}
+            alt="afficher description"
+            className="arrow-down"
+          />
+        </p>
+        <p className="description-content">{description}</p>
       </div>
-      <div className="location-description">{description}</div>
     </div>
   )
 }
