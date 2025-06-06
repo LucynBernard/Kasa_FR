@@ -88,9 +88,18 @@
   align-items: center;
 }
 
+.arrow-down {
+  cursor: pointer;
+}
+
 .description-content {
   color: black;
   background-color: #f6f6f6;
   padding: 1rem;
   border-radius: 10px;
+}
+
+.location-description-area {
+  display: flex;
+  gap: 1rem;
 }

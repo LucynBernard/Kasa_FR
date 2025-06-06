@@ -2,7 +2,8 @@ import React from "react"
 import { useParams } from "react-router-dom"
 import data from "../data/logements.json"
 import "../styles/Locationpage.css"
-import arrowDown from "../assets/arrow_down.png"
+import "../components/Locationdescription"
+import { LocationDescription } from "../components/Locationdescription"
 
 function Locationpage() {
   const { id } = useParams()
@@ -12,7 +13,7 @@ function Locationpage() {
     return <h2>Location non trouvée</h2>
   }
 
-  const { title, cover, description, host, rating, location, tags } = logement
+  const { title, cover, host, rating, location, description, tags } = logement
   return (
     <div className="location-page">
       <div className="location-carrousel">
@@ -50,16 +51,9 @@ function Locationpage() {
           </div>
         </div>
       </div>
-      <div className="location-description">
-        <p className="description-title">
-          <span>Description</span>
-          <img
-            src={arrowDown}
-            alt="afficher description"
-            className="arrow-down"
-          />
-        </p>
-        <p className="description-content">{description}</p>
+      <div className="location-description-area">
+        <LocationDescription description={description} />
+        <LocationDescription description={description} />
       </div>
     </div>
   )
