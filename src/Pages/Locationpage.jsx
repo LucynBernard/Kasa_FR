@@ -4,6 +4,7 @@ import data from "../data/logements.json"
 import "../styles/Locationpage.css"
 import "../components/Locationdescription"
 import { LocationDescription } from "../components/Locationdescription"
+import { LocationCarrousel } from "../components/Locationcarrousel"
 
 function Locationpage() {
   const { id } = useParams()
@@ -13,12 +14,11 @@ function Locationpage() {
     return <h2>Location non trouvée</h2>
   }
 
-  const { title, cover, host, rating, location, description, tags } = logement
+  const { title, host, rating, location, description, tags, pictures } =
+    logement
   return (
     <div className="location-page">
-      <div className="location-carrousel">
-        <img src={cover} alt={title} />
-      </div>
+      <LocationCarrousel pictures={pictures} title={title} />
       <div className="location-header">
         <div className="location-title">
           <h1>{title}</h1>

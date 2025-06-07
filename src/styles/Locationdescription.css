@@ -1,0 +1,38 @@
+.location-description p {
+  margin-block: 0;
+}
+
+.description-title {
+  color: white;
+  background-color: #ff6060;
+  padding-block: 0.5rem;
+  border-radius: 10px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chevron-icon {
+  cursor: pointer;
+  transition: transform 0.3 ease;
+}
+
+.chevron-icon.rotated {
+  transform: rotate(180deg);
+}
+
+.description-content {
+  color: black;
+  background-color: #f6f6f6;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.location-description-area {
+  display: flex;
+  gap: 1rem;
+}
