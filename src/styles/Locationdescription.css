@@ -1,3 +1,7 @@
+.location-description {
+  width: 50%;
+}
+
 .location-description p {
   margin-block: 0;
 }
@@ -35,4 +39,17 @@
 .location-description-area {
   display: flex;
   gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Media queries */
+
+@media screen and (width <= 768px) {
+  .location-description-area {
+    flex-direction: column;
+  }
+
+  .location-description {
+    width: 100%;
+  }
 }

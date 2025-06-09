@@ -5,6 +5,7 @@ import "../styles/Locationpage.css"
 import "../components/Locationdescription"
 import { LocationDescription } from "../components/Locationdescription"
 import { LocationCarrousel } from "../components/Locationcarrousel"
+import { LocationHeader } from "../components/Locationheader"
 
 function Locationpage() {
   const { id } = useParams()
@@ -19,38 +20,13 @@ function Locationpage() {
   return (
     <div className="location-page">
       <LocationCarrousel pictures={pictures} title={title} />
-      <div className="location-header">
-        <div className="location-title">
-          <h1>{title}</h1>
-          <h2>{location}</h2>
-          <div className="location-tags">
-            {tags.map((tag, index) => (
-              <button key={index}>{tag}</button>
-            ))}
-          </div>
-        </div>
-        <div className="location-host">
-          <div className="location-host-details">
-            <h3>{host.name}</h3>
-            <div className="location-host-pic">
-              <img src={host.picture} alt={host.name} />
-            </div>
-          </div>
-          <div className="location-rating">
-            {[1, 2, 3, 4, 5].map((num) => (
-              <span key={num}>
-                <i
-                  className={
-                    num <= parseInt(rating)
-                      ? "fa-solid fa-star"
-                      : "fa-regular fa-star"
-                  }
-                ></i>
-              </span>
-            ))}
-          </div>
-        </div>
-      </div>
+      <LocationHeader
+        title={title}
+        host={host}
+        rating={rating}
+        location={location}
+        tags={tags}
+      />
       <div className="location-description-area">
         <LocationDescription description={description} />
         <LocationDescription description={description} />

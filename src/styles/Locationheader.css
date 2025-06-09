@@ -1,0 +1,76 @@
+.location-header {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.location-title h1 {
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.location-title h2 {
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.location-title button {
+  display: inline;
+  padding: 5px 15px;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  background-color: #ff6060;
+  font-size: 14px;
+}
+
+.location-host {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.location-host h3 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-right: 0.5rem;
+}
+
+.location-host-pic img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
+.location-host-details {
+  margin-top: 1rem;
+  display: flex;
+}
+
+.location-rating {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+  font-size: 24px;
+}
+
+/* Media queries */
+
+@media screen and (width <= 768px) {
+  .location-header {
+    flex-direction: column;
+  }
+
+  .location-host {
+    margin-left: 0;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
