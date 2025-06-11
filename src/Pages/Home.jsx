@@ -1,13 +1,24 @@
 import "../styles/Home.css"
 import React from "react"
 import Banner from "../components/Banner"
-import AllLocations from "../components/AllLocations"
+import Location from "../components/Location"
+import data from "./../data/logements.json"
 
 function Home() {
   return (
     <div>
       <Banner />
-      <AllLocations />
+      <div className="galerie">
+        {data.map((logement) => {
+          return (
+            <Location
+              id={logement.id}
+              title={logement.title}
+              cover={logement.cover}
+            />
+          )
+        })}
+      </div>
     </div>
   )
 }

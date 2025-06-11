@@ -5,3 +5,23 @@
 body {
   font-family: "Montserrat", sans-serif;
 }
+
+.galerie {
+  background-color: #f6f6f6;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 20px;
+  padding: 2rem;
+  justify-content: space-between;
+  max-width: 1440px;
+  margin: auto;
+}
+
+/* Media queries */
+
+@media screen and (width <= 768px) {
+  .galerie {
+    justify-content: center;
+    background-color: white;
+  }
+}

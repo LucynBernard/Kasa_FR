@@ -4,12 +4,16 @@ import Home from "../Pages/Home"
 import Navbar from "../Layout/Navbar"
 import Footer from "../Layout/Footer"
 import Locationpage from "../Pages/Locationpage"
+import Apropos from "../Pages/Apropos"
 
 const Layout = () => {
   return (
     <>
       <Navbar />
-      <Outlet />
+      <main>
+        <Outlet />
+      </main>
+
       <Footer />
     </>
   )
@@ -30,7 +34,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/apropos",
-        element: <h1>À propos</h1>,
+        element: <Apropos />,
       },
     ],
   },

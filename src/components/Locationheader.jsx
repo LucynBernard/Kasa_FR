@@ -27,7 +27,7 @@ export function LocationHeader({ host, title, tags, rating, location }) {
                 className={
                   num <= parseInt(rating)
                     ? "fa-solid fa-star"
-                    : "fa-regular fa-star"
+                    : "fa-solid fa-star grey"
                 }
               ></i>
             </span>

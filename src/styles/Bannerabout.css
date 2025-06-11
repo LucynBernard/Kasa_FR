@@ -1,0 +1,24 @@
+.banner-about {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1440px;
+  margin: auto;
+}
+
+.banner-about img {
+  height: 223px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  filter: brightness(50%);
+}
+
+/* Media queries */
+
+@media screen and (width <= 768px) {
+  .banner-about img {
+    height: 111px;
+  }
+}

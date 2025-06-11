@@ -6,7 +6,9 @@
   margin-bottom: 2rem;
   margin-top: 2rem;
   max-width: 1440px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+  height: 70px;
 }
 
 .navbar-links {

@@ -1,12 +1,15 @@
 import React from "react"
 import "../styles/Location.css"
+import { NavLink } from "react-router-dom"
 
-function Location({ title, cover }) {
+function Location({ title, cover, id }) {
   return (
-    <div className="location">
-      <img src={cover} alt={title} />
-      <div>{title}</div>
-    </div>
+    <NavLink key={id} to={`/location/${id}`} className="location-link">
+      <div className="location">
+        <img src={cover} alt={title} />
+        <div>{title}</div>
+      </div>
+    </NavLink>
   )
 }
 

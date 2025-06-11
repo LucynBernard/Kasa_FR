@@ -1,0 +1,44 @@
+.location-equipments {
+  width: 50%;
+}
+
+.equipments-title {
+  margin-block: 0;
+  color: white;
+  background-color: #ff6060;
+  padding-block: 0.5rem;
+  border-radius: 10px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chevron-icon {
+  cursor: pointer;
+  transition: transform 0.3 ease;
+}
+
+.chevron-icon.rotated {
+  transform: rotate(180deg);
+}
+
+.equipments-content {
+  color: black;
+  background-color: #f6f6f6;
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 0;
+  list-style-type: none;
+}
+
+/* Media queries */
+
+@media screen and (width <= 768px) {
+  .location-equipments {
+    width: 100%;
+  }
+}
