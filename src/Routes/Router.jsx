@@ -5,6 +5,7 @@ import Navbar from "../Layout/Navbar"
 import Footer from "../Layout/Footer"
 import Locationpage from "../Pages/Locationpage"
 import Apropos from "../Pages/Apropos"
+import { ErrorPage } from "../Pages/Errorpage"
 
 const Layout = () => {
   return (
@@ -22,7 +23,6 @@ const Layout = () => {
 export const router = createBrowserRouter([
   {
     element: <Layout />,
-    errorElement: <h1>404 not found</h1>,
     children: [
       {
         path: "/",
@@ -35,6 +35,10 @@ export const router = createBrowserRouter([
       {
         path: "/apropos",
         element: <Apropos />,
+      },
+      {
+        path: "*",
+        element: <ErrorPage />,
       },
     ],
   },

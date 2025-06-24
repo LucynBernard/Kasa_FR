@@ -1,12 +1,11 @@
 import "../styles/Banner.css"
 import React from "react"
-import banner from "../assets/banner1.jpg"
 
-function Banner() {
+function Banner({ image, text, className = "" }) {
   return (
-    <div className="banner">
-      <img src={banner} alt="banner" />
-      <h1>Chez vous, partout et ailleurs</h1>
+    <div className={`banner ${className}`}>
+      <img src={image} alt="bannière" />
+      {text && <h1>{text}</h1>}
     </div>
   )
 }

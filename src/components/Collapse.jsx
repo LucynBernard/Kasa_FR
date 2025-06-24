@@ -1,8 +1,8 @@
 import React, { useState } from "react"
-import "../styles/Locationdescription.css"
 import arrowDown from "../assets/arrow_down.png"
+import "../styles/Collapse.css"
 
-export function LocationDescription({ description }) {
+export function Collapse({ description, title }) {
   const [isDescriptionOpen, setIsDescriptionOpen] = useState(false)
 
   return (
@@ -11,7 +11,7 @@ export function LocationDescription({ description }) {
         className="description-title"
         onClick={() => setIsDescriptionOpen((prev) => !prev)}
       >
-        <span>Description</span>
+        <span>{title}</span>
         <img
           src={arrowDown}
           alt="afficher description"
@@ -19,7 +19,7 @@ export function LocationDescription({ description }) {
         />
       </p>
       {isDescriptionOpen && (
-        <p className="description-content">{description}</p>
+        <div className="description-content">{description}</div>
       )}
     </div>
   )

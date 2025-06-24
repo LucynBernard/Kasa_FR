@@ -1,10 +1,10 @@
-import React, { useState } from "react"
-import BannerAbout from "../components/Bannerabout"
-import arrowDown from "../assets/arrow_down.png"
+import React from "react"
+import Banner from "../components/Banner"
+import bannerAbout from "../assets/banner2.jpg"
+import { Collapse } from "../components/Collapse"
 import "../styles/Apropos.css"
 
 function Apropos() {
-  const [OpenSection, setOpenSection] = useState(null)
   const aproposDatas = [
     {
       id: "1",
@@ -31,37 +31,12 @@ function Apropos() {
         "La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.",
     },
   ]
-  const toggleSection = (id) => {
-    setOpenSection((prev) => (prev === id ? null : id))
-  }
   return (
     <>
-      <BannerAbout />
+      <Banner image={bannerAbout} />
       <div className="apropos">
         {aproposDatas.map((data) => (
-          <div key={data.id} className="apropos-item">
-            <div
-              className="apropos-title"
-              onClick={() => toggleSection(data.id)}
-              role="button"
-              tabIndex={0}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" || e.key === "") toggleSection(data.id)
-              }}
-            >
-              <span>{data.title}</span>
-              <img
-                src={arrowDown}
-                alt="afficher le contenu"
-                className={`chevron-icon ${
-                  OpenSection === data.id ? "rotated" : ""
-                }`}
-              />
-            </div>
-            {OpenSection === data.id && (
-              <p className="apropos-content">{data.content}</p>
-            )}
-          </div>
+          <Collapse title={data.title} description={data.content} />
         ))}
       </div>
     </>
