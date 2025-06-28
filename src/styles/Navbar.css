@@ -35,6 +35,11 @@
 /* Media queries */
 
 @media screen and (width <= 768px) {
+  .navbar {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .navbar-logo img {
     width: 145px;
   }

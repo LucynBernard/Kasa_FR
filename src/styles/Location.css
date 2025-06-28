@@ -43,7 +43,7 @@
 /* Media queries */
 
 @media screen and (width <= 768px) {
-  .location {
-    flex-basis: 100%;
+  .location-link {
+    width: 100%;
   }
 }

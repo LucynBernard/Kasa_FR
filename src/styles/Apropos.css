@@ -47,6 +47,10 @@
 /* Media queries */
 
 @media screen and (width <= 768px) {
+  .apropos {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
   .apropos-item {
     width: 100%;
   }

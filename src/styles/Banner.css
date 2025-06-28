@@ -24,12 +24,17 @@
 /* Media queries */
 
 @media screen and (width <= 768px) {
+  .banner {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .banner img {
     height: 111px;
   }
 
   .banner h1 {
-    font-size: 24px;
+    font-size: 20px;
     padding-left: 1rem;
   }
 }
