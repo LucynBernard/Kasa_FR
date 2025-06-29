@@ -69,11 +69,26 @@
 @media screen and (width <= 768px) {
   .location-header {
     flex-direction: column;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .location-title h1 {
+    font-size: 20px;
+  }
+
+  .location-title h2 {
+    margin-bottom: 1rem;
   }
 
   .location-host {
     margin-left: 0;
     flex-direction: row-reverse;
     justify-content: space-between;
+  }
+
+  .location-title button {
+    font-size: 10px;
+    width: 90px;
   }
 }

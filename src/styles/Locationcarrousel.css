@@ -40,8 +40,21 @@
 /* Media queries */
 
 @media screen and (width <= 768px) {
+  .location-carrousel {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .carrousel-button {
     height: 50px;
+  }
+
+  .carrousel-button.left {
+    left: 20px;
+  }
+
+  .carrousel-button.right {
+    right: 20px;
   }
 
   .carrousel-counter {

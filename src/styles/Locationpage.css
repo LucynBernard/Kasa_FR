@@ -3,3 +3,12 @@
   max-width: 1440px;
   margin: auto;
 }
+
+/* Media queries */
+
+@media screen and (width <= 768px) {
+  .location-description-area {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
